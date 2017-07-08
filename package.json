@@ -52,7 +52,8 @@
     "build": "npm run build:main",
     "build:main": "rollup -c config/rollup.config.main.js",
     "due-diligence": "npm run lint && npm run build && npm run readme",
-    "precommit": "npm run due-diligence"
+    "precommit": "npm run due-diligence",
+    "test": "echo 'trust!'"
   },
   "dependencies": {
     "katsu-curry": "^0.0.4"
