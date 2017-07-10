@@ -4,23 +4,13 @@
     "node": true,
     "es6": true
   },
-  "space": 2,
-  "semicolon": false,
-  "esnext": true,
-  "ecmaFeatures": {
-    "jsx": true
-  },
   "parserOptions": {
     "ecmaVersion": 7,
     "sourceType": "module"
   },
-  "ignores": [
-    "*.js",
-    "forge-ui.*"
-  ],
   "rules": {
+    "no-extra-semi": "error",
     "complexity": [1, 4],
-    "max-params": [1, {"max": 12}],
     "valid-jsdoc": [2, {
       "prefer": {
         "return": "returns"
