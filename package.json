@@ -56,7 +56,7 @@
     "test": "echo 'trust!'"
   },
   "dependencies": {
-    "katsu-curry": "^0.0.6"
+    "katsu-curry": "^0.0.7"
   },
   "devDependencies": {
     "babel-plugin-istanbul": "^4.1.4",
