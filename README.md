@@ -12,15 +12,18 @@ Example:
 import {e1} from 'entrust'
 const map = e1(`map`) // this takes a function first, and then the data
 map(x => x * 2, [1,2,3]) // [2,4,6]
-// this is a naïve implementation, see `f-utility` for a better one, but this is a good example
 ```
 
-Here's an example of how to apply the same approach to a tertiary function:
+Here's an example of how to apply the same approach to a tertiary function, like `reduce`:
 
 ```js
 import {e2} from 'entrust'
-import F from 'fantasy-eithers'
-const fold = e2(`fold`) // e2(`fold`, reject, resolve, either)
+// native reduce looks like: array.reduce(fn, initial)
+const reduce = e2(`reduce`) // e2(`reduce`, fn, initial, array)
+const sum = reduce((a, b) => a + b, 0)
+sum([1,2,3]) // 6
+sum([1,2,3,4]) // 10
+sum([1,2,3,4,5]) // 15
 ```
 
 _NB: This approach is used extensively in the `f-utility` module. You may want to take a look at it [here](https://www.npmjs.com/package/f-utility)._
