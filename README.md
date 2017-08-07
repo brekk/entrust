@@ -44,7 +44,7 @@ const toLowerCase = e0(`toLowerCase`)
 toLowerCase(`COOL`) // cool
 ```
 
-Returns **any**
+Returns **any** 
 
 ## e1
 
@@ -62,7 +62,7 @@ const split = e1(`split`)
 split(`:`, `c:o:o:l`) // [`c`,`o`,`o`,`l`]
 ```
 
-Returns **any**
+Returns **any** 
 
 ## e2
 
@@ -81,7 +81,7 @@ const replace = e2(`replace`)
 replace(`old`, `new`, `oldnew`) // newnew
 ```
 
-Returns **any**
+Returns **any** 
 
 ## e3
 
@@ -93,7 +93,7 @@ Returns **any**
 -   `c` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
 
 ## e4
 
@@ -106,7 +106,7 @@ Returns **any**
 -   `d` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
 
 ## e5
 
@@ -120,7 +120,7 @@ Returns **any**
 -   `e` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
 
 ## e6
 
@@ -135,7 +135,7 @@ Returns **any**
 -   `f` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
 
 ## e7
 
@@ -151,7 +151,7 @@ Returns **any**
 -   `g` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
 
 ## e8
 
@@ -168,7 +168,7 @@ Returns **any**
 -   `h` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
 
 ## e9
 
@@ -186,7 +186,7 @@ Returns **any**
 -   `i` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
 
 ## e10
 
@@ -205,4 +205,4 @@ Returns **any**
 -   `j` **any** some parameter
 -   `x` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
-Returns **any**
+Returns **any** 
