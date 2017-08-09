@@ -43,18 +43,9 @@
     ]
   },
   "scripts": {
-    "dependencies": "depcheck",
-    "graph": "madge src --json | jayin \"_.toPairs(x).map(([k, v]) => ([k,_.map(v, (y) => y.indexOf('node_modules') > -1 ? y.substr(y.indexOf('node_modules') + 13) : y)])).filter(([k, v]) => !(k.indexOf('spec') > -1)).filter(([k, v]) => !(k.indexOf('scss') > -1)).filter(([k, v]) => !(k.indexOf('css') > -1)).reduce((agg, [k, v]) => Object.assign({}, agg, {[k]: v}), {})\" | madge --stdin --image dependencies.svg",
-    "documentation": "documentation build src/** -f html -o docs",
-    "readme": "documentation readme README.md -s \"API\" src/index.js",
-    "lint": "npm run lint:src && npm run lint:jsdoc",
-    "lint:src": "eslint src/*.js",
-    "lint:jsdoc": "documentation lint src/index.js",
-    "build": "npm run build:main",
-    "build:main": "rollup -c config/rollup.config.main.js",
-    "due-diligence": "npm run lint && npm run build && npm run readme",
-    "precommit": "npm run due-diligence",
-    "test": "echo 'trust!'"
+    "start": "nps",
+    "test": "nps test",
+    "precommit": "npm run due-diligence"
   },
   "dependencies": {
     "katsu-curry": "^0.4.0"
