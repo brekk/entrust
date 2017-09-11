@@ -35,7 +35,7 @@ export const eN = curry((n, method, args, delegatee) => {
 /**
  * invoke a delegated method with arguments as an array. enforces specific arity
  * Yells at you if you give arguments that don't match the expected arity.
- * @method eN
+ * @method eD
  * @param {number} n - 0 - 10
  * @param {string} method - a function name on your delegatee
  * @param {Array} args - arguments to pass to your delegatee's method

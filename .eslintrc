@@ -46,8 +46,7 @@
     "new-cap": [2, {"capIsNew": false}],
     "no-trailing-spaces": [2, { "skipBlankLines": true }],
     "no-unused-vars": [2, {
-      "vars": "all",
-      "varsIgnorePattern": "^style|^Inferno$"
+      "vars": "all"
     }],
     "object-curly-spacing": 0,
     "one-var": 0,
