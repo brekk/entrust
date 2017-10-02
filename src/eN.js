@@ -49,10 +49,14 @@ export const eN = curry((n, method, args, delegatee) => {
  * eD(2, `reduce`, [(a, b) => (a + b), 0], [1,2,3]) // 6
  * eD(2, `reduce`, [(a, b) => (a + b)], [1, 2, 3]) // throws error
  */
-export const eD = curry((n, m, a, d) => {
-  if (n !== a.length) {
-    // eslint-disable-next-line fp/no-throw
-    throw new Error(`${m} expects total args (${a.length}) to equal the given arity (${n})`)
+/* istanbul ignore next */
+export const eD = curry(
+  /* istanbul ignore next */
+  function entrustNDebug(n, m, a, d) {
+    if (n !== a.length) {
+      // eslint-disable-next-line fp/no-throw
+      throw new Error(`${m} expects total args (${a.length}) to equal the given arity (${n})`)
+    }
+    return eN(n, m, a, d)
   }
-  return eN(n, m, a, d)
-})
+)

@@ -12,7 +12,7 @@ module.exports = bundle({
   external,
   input: `src/index.js`,
   output: {
-    file: `./${pkg.name}.js`,
-    format: `cjs`
+    file: `./${pkg.name}.mjs`,
+    format: `es`
   }
 })
