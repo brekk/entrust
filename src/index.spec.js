@@ -1,5 +1,5 @@
 /* global test */
-import {t} from 'germs/lib/test-helpers'
+import {t} from 'germs'
 import {
   eN, eD,
   e0,
