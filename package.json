@@ -1,6 +1,6 @@
 {
   "name": "entrust",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "delegatee-last structure for curried functions",
   "license": "ISC",
   "main": "entrust.js",
@@ -30,7 +30,9 @@
   },
   "homepage": "https://github.com/brekk/entrust#readme",
   "jest": {
-    "modulePaths": ["src"],
+    "modulePaths": [
+      "src"
+    ],
     "moduleDirectories": [
       "node_modules",
       "src"
@@ -40,7 +42,9 @@
       "js",
       "json"
     ],
-    "testMatch": ["**/*.spec.(jsx|js)"]
+    "testMatch": [
+      "**/*.spec.(jsx|js)"
+    ]
   },
   "dependencies": {
     "katsu-curry": "^0.4.0"
