@@ -1,6 +1,6 @@
 {
   "name": "entrust",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "delegatee-last structure for curried functions",
   "license": "ISC",
   "main": "entrust.js",
