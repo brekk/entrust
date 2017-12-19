@@ -1,5 +1,5 @@
 const pkg = require(`../package.json`)
-const {bundle} = require(`germs/germs`)
+const {bundle} = require(`germs`)
 
 const external = (
   pkg && pkg.dependencies ?
@@ -9,13 +9,11 @@ const external = (
 
 module.exports = bundle({
   name: pkg.name,
-  alias: {
-    
-  },
   external,
   input: `src/index.js`,
   output: {
-    file: `./${pkg.name}.mjs`,
-    format: `es`
+    name: pkg.name,
+    file: `./${pkg.name}.browser.js`,
+    format: `iife`
   }
 })

@@ -119,12 +119,13 @@ test(`eN`, () => {
 })
 test(`eD`, () => {
   t.is(typeof eD, `function`)
+  const ternaryFn = (a, b, c) => a + b + c
   t.is(
-    eD(3, `method`, [1, 2, 3], {method: (a, b, c) => a + b + c}),
+    eD(3, `method`, [1, 2, 3], {method: ternaryFn}),
     6
   )
   t.throws(
-    () => eD(3, `method`, [1, 2], {method: (a, b, c) => a + b + c}),
+    () => eD(3, `method`, [1, 2], {method: ternaryFn}),
     // n,m,a,d
     `method expects total args (2) to equal the given arity (3)`
   )
