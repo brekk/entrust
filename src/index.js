@@ -40,6 +40,12 @@ export const raw = {
   eN: _eN
 }
 
+/**
+ * generate a customized version of entrust's API
+ * @function custom
+ * @param {function} curry - a function which curries
+ * @returns {object} raw+ an augmented version of the raw API
+ */
 export const custom = (curry) => {
   const merge = (a, b) => Object.assign({}, a, b)
   return Object.keys(raw).map((k) => ({
