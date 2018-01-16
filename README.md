@@ -49,6 +49,7 @@ _NB: This approach is used extensively in the `f-utility` module. You may want t
 -   [e9](#e9)
 -   [eN](#en)
 -   [eD](#ed)
+-   [custom](#custom)
 
 ## e0
 
@@ -273,3 +274,13 @@ eD(2, `reduce`, [(a, b) => (a + b)], [1, 2, 3]) // throws error
 ```
 
 Returns **any** the result of delegating to the method with some arguments
+
+## custom
+
+generate a customized version of entrust's API
+
+**Parameters**
+
+-   `curry` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** a function which curries
+
+Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** raw+ an augmented version of the raw API
