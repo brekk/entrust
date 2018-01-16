@@ -45,6 +45,10 @@ export const raw = {
  * @function custom
  * @param {function} curry - a function which curries
  * @returns {object} raw+ an augmented version of the raw API
+ * @example
+ * import {custom} from 'entrust'
+ * import curry from 'lodash/fp/curry'
+ * const {e0} = custom(curry)
  */
 export const custom = (curry) => {
   const merge = (a, b) => Object.assign({}, a, b)
