@@ -8,7 +8,7 @@ module.exports = bundle({
   },
   input: `src/index.js`,
   output: {
-    name: `FUTILITY`,
+    name: `entrust`,
     file: `./${pkg.name}.js`,
     format: `umd`
   },

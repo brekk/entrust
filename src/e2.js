@@ -1,5 +1,7 @@
 import {curry} from 'katsu-curry'
 
+export const _e2 = (fn, a, b, x) => x[fn](a, b)
+
 /**
  * @method e2
  * @param {string} fn - a function name
@@ -12,6 +14,4 @@ import {curry} from 'katsu-curry'
  * const replace = e2(`replace`)
  * replace(`old`, `new`, `oldnew`) // newnew
  */
-export const e2 = curry(
-  (fn, a, b, x) => x[fn](a, b)
-)
+export const e2 = curry(_e2)

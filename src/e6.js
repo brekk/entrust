@@ -1,5 +1,7 @@
 import {curry} from 'katsu-curry'
 
+export const _e6 = (fn, a, b, c, d, e, f, x) => x[fn](a, b, c, d, e, f)
+
 /**
  * @method e6
  * @param {string} fn - a function name
@@ -12,6 +14,4 @@ import {curry} from 'katsu-curry'
  * @param {Object} x - an object
  * @returns {*}
  */
-export const e6 = curry(
-  (fn, a, b, c, d, e, f, x) => x[fn](a, b, c, d, e, f)
-)
+export const e6 = curry(_e6)

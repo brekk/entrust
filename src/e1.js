@@ -1,5 +1,7 @@
 import {curry} from 'katsu-curry'
 
+export const _e1 = (fn, a, x) => x[fn](a)
+
 /**
  * @method e1
  * @param {string} fn - a function name
@@ -11,6 +13,4 @@ import {curry} from 'katsu-curry'
  * const split = e1(`split`)
  * split(`:`, `c:o:o:l`) // [`c`,`o`,`o`,`l`]
  */
-export const e1 = curry(
-  (fn, a, x) => x[fn](a)
-)
+export const e1 = curry(_e1)
