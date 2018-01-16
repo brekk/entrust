@@ -11,6 +11,12 @@ import {e8} from './e8'
 import {e9} from './e9'
 import {e10} from './e10'
 
+export const _eN = (n, method, args, delegatee) => {
+  const entrustees = [e0, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10]
+  const params = [method, ...args, delegatee]
+  return entrustees[n].apply(null, params)
+}
+
 /**
  * invoke a delegated method with arguments as an array. enforces specific arity
  * @method eN
@@ -26,12 +32,15 @@ import {e10} from './e10'
  * eN(1, `map`, [(x) => x * 2], [1,2,3]) // [2,4,6]
  * eN(2, `reduce`, [(a, b) => (a + b), 0], [1,2,3]) // 6
  */
-export const eN = curry((n, method, args, delegatee) => {
-  const entrustees = [e0, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10]
-  const params = [method, ...args, delegatee]
-  return entrustees[n].apply(null, params)
-})
+export const eN = curry(_eN)
 
+export function _eD(n, m, a, d) {
+  if (n !== a.length) {
+    // eslint-disable-next-line fp/no-throw
+    throw new Error(`${m} expects total args (${a.length}) to equal the given arity (${n})`)
+  }
+  return _eN(n, m, a, d)
+}
 /**
  * invoke a delegated method with arguments as an array. enforces specific arity
  * Yells at you if you give arguments that don't match the expected arity.
@@ -52,11 +61,5 @@ export const eN = curry((n, method, args, delegatee) => {
 /* istanbul ignore next */
 export const eD = curry(
   /* istanbul ignore next */
-  function entrustNDebug(n, m, a, d) {
-    if (n !== a.length) {
-      // eslint-disable-next-line fp/no-throw
-      throw new Error(`${m} expects total args (${a.length}) to equal the given arity (${n})`)
-    }
-    return eN(n, m, a, d)
-  }
+  _eD
 )
