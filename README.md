@@ -283,4 +283,12 @@ generate a customized version of entrust's API
 
 -   `curry` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** a function which curries
 
+**Examples**
+
+```javascript
+import {custom} from 'entrust'
+import curry from 'lodash/fp/curry'
+const {e0} = custom(curry)
+```
+
 Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** raw+ an augmented version of the raw API
