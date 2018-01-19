@@ -1,6 +1,6 @@
 const germs = require(`germs`)
 const pkg = require(`./package.json`)
-const utils = require(`nps-utils`)
+// const utils = require(`nps-utils`)
 
 // const allNPS = utils.concurrent.nps
 module.exports = germs.build(pkg.name, {
