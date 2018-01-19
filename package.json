@@ -47,7 +47,7 @@
     ]
   },
   "dependencies": {
-    "katsu-curry": "^0.7.0"
+    "katsu-curry": "^0.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

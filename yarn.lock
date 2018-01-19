@@ -4515,9 +4515,9 @@ jsx-ast-utils@^2.0.0:
   dependencies:
     array-includes "^3.0.3"
 
-katsu-curry@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/katsu-curry/-/katsu-curry-0.7.0.tgz#bf0c117b2a1b746e2d50489756446f6aa9abc421"
+katsu-curry@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/katsu-curry/-/katsu-curry-0.7.1.tgz#dd76a5eeede3f9130d91fb11bf81183a442ea2ac"
   dependencies:
     fast.js "^0.1.1"
 
