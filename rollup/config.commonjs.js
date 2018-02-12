@@ -10,5 +10,10 @@ module.exports = bundle({
     name: pkg.name,
     file: `./${pkg.name}.js`,
     format: `umd`
+  },
+  alterPlugins: (plug) => {
+    // eslint-disable-next-line fp/no-mutating-methods
+    plug.splice(7, 1)
+    return plug
   }
 })

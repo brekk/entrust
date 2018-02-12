@@ -1,6 +1,6 @@
 import {curry} from 'katsu-curry'
 
-export const _e1 = (fn, a, x) => x[fn](a)
+export const entrust1 = (fn, a, x) => x[fn](a)
 
 /**
  * @method e1
@@ -13,4 +13,4 @@ export const _e1 = (fn, a, x) => x[fn](a)
  * const split = e1(`split`)
  * split(`:`, `c:o:o:l`) // [`c`,`o`,`o`,`l`]
  */
-export const e1 = curry(_e1)
+export const e1 = curry(entrust1)

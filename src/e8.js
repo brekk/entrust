@@ -1,6 +1,6 @@
 import {curry} from 'katsu-curry'
 
-export const _e8 = (fn, a, b, c, d, e, f, g, h, x) => x[fn](a, b, c, d, e, f, g, h)
+export const entrust8 = (fn, a, b, c, d, e, f, g, h, x) => x[fn](a, b, c, d, e, f, g, h)
 
 /**
  * @method e8
@@ -16,4 +16,4 @@ export const _e8 = (fn, a, b, c, d, e, f, g, h, x) => x[fn](a, b, c, d, e, f, g,
  * @param {Object} x - an object
  * @returns {*}
  */
-export const e8 = curry(_e8)
+export const e8 = curry(entrust8)

@@ -1,6 +1,6 @@
 import {curry} from 'katsu-curry'
 
-export const _e0 = (fn, x) => x[fn]()
+export const entrust0 = (fn, x) => x[fn]()
 
 /**
  * @method e0
@@ -12,4 +12,4 @@ export const _e0 = (fn, x) => x[fn]()
  * const toLowerCase = e0(`toLowerCase`)
  * toLowerCase(`COOL`) // cool
  */
-export const e0 = curry(_e0)
+export const e0 = curry(entrust0)
