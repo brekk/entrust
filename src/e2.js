@@ -1,6 +1,6 @@
 import {curry} from 'katsu-curry'
 
-export const _e2 = (fn, a, b, x) => x[fn](a, b)
+export const entrust2 = (fn, a, b, x) => x[fn](a, b)
 
 /**
  * @method e2
@@ -14,4 +14,4 @@ export const _e2 = (fn, a, b, x) => x[fn](a, b)
  * const replace = e2(`replace`)
  * replace(`old`, `new`, `oldnew`) // newnew
  */
-export const e2 = curry(_e2)
+export const e2 = curry(entrust2)
