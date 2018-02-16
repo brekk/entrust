@@ -36,6 +36,8 @@ _NB: This approach is used extensively in the `f-utility` module. You may want t
 
 ### Table of Contents
 
+-   [eN](#en)
+-   [eD](#ed)
 -   [e0](#e0)
 -   [e1](#e1)
 -   [e10](#e10)
@@ -47,9 +49,53 @@ _NB: This approach is used extensively in the `f-utility` module. You may want t
 -   [e7](#e7)
 -   [e8](#e8)
 -   [e9](#e9)
--   [eN](#en)
--   [eD](#ed)
 -   [custom](#custom)
+
+## eN
+
+invoke a delegated method with arguments as an array. enforces specific arity
+
+**Parameters**
+
+-   `n` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 0 - 10
+-   `method` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** a function name on your delegatee
+-   `args` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** arguments to pass to your delegatee's method
+-   `delegatee` **any** something with methods
+
+**Examples**
+
+```javascript
+import {eN} from 'entrust'
+eN(0, `toUpperCase`, [], `cool`) // `COOL`
+eN(1, `map`, [(x) => x * 2], [1,2,3]) // [2,4,6]
+eN(2, `reduce`, [(a, b) => (a + b), 0], [1,2,3]) // 6
+```
+
+Returns **any** the result of delegating to the method with some arguments
+
+## eD
+
+invoke a delegated method with arguments as an array. enforces specific arity
+Yells at you if you give arguments that don't match the expected arity.
+
+**Parameters**
+
+-   `n` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 0 - 10
+-   `method` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** a function name on your delegatee
+-   `args` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** arguments to pass to your delegatee's method
+-   `delegatee` **any** something with methods
+
+**Examples**
+
+```javascript
+import {eD} from 'entrust'
+eD(0, `toUpperCase`, [], `cool`) // `COOL`
+eD(1, `map`, [(x) => x * 2], [1,2,3]) // [2,4,6]
+eD(2, `reduce`, [(a, b) => (a + b), 0], [1,2,3]) // 6
+eD(2, `reduce`, [(a, b) => (a + b)], [1, 2, 3]) // throws error
+```
+
+Returns **any** the result of delegating to the method with some arguments
 
 ## e0
 
@@ -228,52 +274,6 @@ Returns **any**
 -   `x` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object
 
 Returns **any** 
-
-## eN
-
-invoke a delegated method with arguments as an array. enforces specific arity
-
-**Parameters**
-
--   `n` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 0 - 10
--   `method` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** a function name on your delegatee
--   `args` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** arguments to pass to your delegatee's method
--   `delegatee` **any** something with methods
-
-**Examples**
-
-```javascript
-import {eN} from 'entrust'
-eN(0, `toUpperCase`, [], `cool`) // `COOL`
-eN(1, `map`, [(x) => x * 2], [1,2,3]) // [2,4,6]
-eN(2, `reduce`, [(a, b) => (a + b), 0], [1,2,3]) // 6
-```
-
-Returns **any** the result of delegating to the method with some arguments
-
-## eD
-
-invoke a delegated method with arguments as an array. enforces specific arity
-Yells at you if you give arguments that don't match the expected arity.
-
-**Parameters**
-
--   `n` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 0 - 10
--   `method` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** a function name on your delegatee
--   `args` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** arguments to pass to your delegatee's method
--   `delegatee` **any** something with methods
-
-**Examples**
-
-```javascript
-import {eD} from 'entrust'
-eD(0, `toUpperCase`, [], `cool`) // `COOL`
-eD(1, `map`, [(x) => x * 2], [1,2,3]) // [2,4,6]
-eD(2, `reduce`, [(a, b) => (a + b), 0], [1,2,3]) // 6
-eD(2, `reduce`, [(a, b) => (a + b)], [1, 2, 3]) // throws error
-```
-
-Returns **any** the result of delegating to the method with some arguments
 
 ## custom
 
