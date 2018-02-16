@@ -9,7 +9,7 @@ import {entrust7} from './e7'
 import {entrust8} from './e8'
 import {entrust9} from './e9'
 import {entrust10} from './e10'
-import {entrustN, entrustD} from './eN'
+import {entrustN, entrustD} from './e-n'
 
 export {e0} from './e0'
 export {e1} from './e1'
@@ -22,7 +22,7 @@ export {e7} from './e7'
 export {e8} from './e8'
 export {e9} from './e9'
 export {e10} from './e10'
-export {eN, eD} from './eN'
+export {eN, eD} from './e-n'
 
 export const raw = {
   e0: entrust0,
