@@ -59,7 +59,7 @@
     "jayin": "^0.0.3",
     "jest": "^22.0.1",
     "jest-cli": "^22.0.1",
-    "nps": "^5.7.1",
+    "nps": "^5.9.6",
     "nps-utils": "^1.5.0",
     "rollup": "^0.54.1",
     "rollup-plugin-alias": "^1.4.0",
